@@ -1,0 +1,140 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\title{Lista Extra 1}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Exercícios para aula}\\
+		\textbf{Distribuição Binomial 19/08/2022}
+	\end{center}
+	1) Em um sistema de transmissão de dados existe uma probabilidade igual a 0,05 de um dado ser transmitido erroneamente. Ao se realizar um teste para analisar a	confiabilidade do sistema foram transmitidos 4 dados.\\
+	a) Qual é a probabilidade de que tenha havido erro na transmissão?
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\geq$ 1) = 1 - $\mathbb{P}$(X < 1) = 1 - $\mathbb{P}$(X = 0)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 1) = 1 - C$_{5, 0}$ * 0,05$^0$ * 0,95$^5$ = 1 - 1 * 1 * 0,7738 = 1 - 0,7738 = 0,2262  
+	\end{center}
+	\vspace{1cm}
+	b) Qual é a probabilidade de que tenha havido erro na transmissão de
+	exatamente 2 dados?
+	\begin{center}
+		$\mathbb{P}$(X = 2) = C$_{4, 2}$ * 0,05$^2$ * 0,95$^2$ = 6 * 0,0025 * 0,9025 = 0,0135
+	\end{center}
+	\vspace{1cm}
+	2) Suponha que você vai fazer uma prova com 10 questões do tipo verdadeiro-falso. Você nada sabe sobre o assunto e vai responder as questões por adivinhação.\\
+	a) Qual é a probabilidade de acertar exatamente 5 questões?
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X = 5) = C$_{10, 5}$ * 0,5$^5$ * 0,5$^5$ = 252 * 0,03125 * 0,03125 = 0,2461
+	\end{center}
+	\vspace{1cm}
+	b) Qual é a probabilidade de acertar pelo menos 8 questões?
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\geq$ 8) = $\mathbb{P}$(X = 8) + $\mathbb{P}$(X = 9) + $\mathbb{P}$(X = 10)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 8) = C$_{10, 8}$ * 0,5$^8$ * 0,5$^2$ + C$_{10, 9}$ * 0,5$^9$ * 0,5$^1$ + C$_{10, 10}$ * 0,5$^{10}$ * 0,5$^0$
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 8) = 45 * 0,00391 * 0,25 + 10 * 0,00195 * 0,5 + 1 * 0,00098 * 1
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 8) = 0,04399 + 0,00975 + 0,00098 = 0,0547 
+	\end{center}
+	\vspace{1cm}
+	3) Suponha que 10\% da população seja canhota. São escolhidas 3 pessoas ao acaso. Qual é a probabilidade de ao menos uma das pessoas ser canhota?
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\geq$ 1) = 1 - $\mathbb{P}$(X < 1) = 1 - $\mathbb{P}$(X = 0)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 1) = 1 - C$_{3, 0}$ * 0,1$^0$ * 0,9$^3$ = 1 - 1 * 1 * 0,729 = 1 - 0,271 = 0,271 
+	\end{center}
+	\vspace{1cm}
+	4) Suponha que em uma fábrica produz resistência para chuveiros, com uma taxa de	defeitos de 2\%. Qual a probabilidade de que em uma inspeção de 10 resistências se tenha 3 resistências defeituosas?
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X = 3) = C$_{10, 3}$ * 0,02$^3$ * 0,98$^7$ = 120 * 0,000008 * 0,86812 = 0,0008
+	\end{center}
+	\vspace{1cm}
+	5) Num armazém encontra-se um lote de 10.000 latas de um certo produto alimentar que está a ser preparado para ser distribuído. 500 dessas latas já ultrapassaram o prazo de validade. É efetuada uma inspeção sobre uma amostra de 15 embalagens escolhidas ao acaso com reposição. A inspeção rejeita o lote se forem encontradas mais do que duas
+	latas fora do prazo de validade nessa amostra.\\ 
+	a) Qual a probabilidade de rejeição do lote?
+	\begin{center}
+		\vspace{0.5cm}
+		Q$_{Vencidos} = \dfrac{500}{10.000} = 0,05$
+		\vspace{0.75cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - $\mathbb{P}$(X < 2) = 1 - [$\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 1)]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - [C$_{15, 1}$ * 0,05$^1$ * 0,95$^14$ + C$_{15, 0}$ * 0,05$^0$ * 0,95$^15$]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - [15 * 0,05 * 0,48767 + 1 * 1 * 0,46329] = 1 - [0,36575 + 0,46329]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - 0,82904 = 0,1710
+	\end{center}
+	\vspace{1cm}
+	b) Qual o número esperado de latas fora do prazo de validade?
+	\begin{center}
+		\vspace{0.5cm}
+		E[X] = n * p = 15 * 0,05 = 0,75
+	\end{center}
+	\vspace{1cm}
+	6) Uma remessa de 800 estabilizadores de tensão é recebida pelo controle de qualidade de uma empresa. São inspecionados 20 aparelhos da remessa, que será aceita se ocorrer no máximo um defeituoso. Há 80 defeituosos no lote. Qual a probabilidade de o lote ser	aceito?
+	\begin{center}
+		\vspace{0.5cm}
+		Q$_{Defeituosos} = \dfrac{80}{800} = 0,1$
+		\vspace{0.75cm}\\
+		$\mathbb{P}$(X $\leq$ 1) = $\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 0)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\leq$ 1) = C$_{20, 1}$ * 0,1$^1$ * 0,9$^{19}$ + C$_{20, 0}$ * 0,1$^0$ * 0,9$^{20}$ 
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\leq$ 1) = 20 * 0,1 * 0,13508 + 1 * 1 * 0,12158 = 0,27016 + 0,12158 = 0,3917
+	\end{center}
+	\vspace{1cm}
+	7) Acredita-se que 20\% dos moradores das proximidades de uma grande indústria siderúrgica têm alergia aos poluentes lançados ao ar. Admitindo que este percentual de alérgicos é real (correto), calcule a probabilidade de que pelo menos 4 moradores tenham alergia entre 13 selecionados ao acaso.
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\geq$ 4) = 1 - $\mathbb{P}$(X < 4) = 1 - [$\mathbb{P}$(X = 3) + $\mathbb{P}$(X = 2) + $\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 1)]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 4) = 1 - [C$_{13, 3}$ * 0,2$^3$ * 0,8$^{10}$ + C$_{13, 2}$ * 0,2$^2$ * 0,8$^{11}$\\ + C$_{13, 1}$ * 0,2$^1$ * 0,8$^{12}$ + C$_{13, 0}$ * 0,2$^0$ * 0,8$^{13}$]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 4) = 1 - [286 * 0,008 * 0,10737 + 78 * 0,04 * 0,08590\\
+		+ 13 * 0,2 * 0,06872 + 1 * 1 * 0,05497]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 4) = 1 - [0,24223 + 0,26801 + 0,17867 + 0,05497] = 1 - 0,74338 = 0,2561
+	\end{center}
+	\vspace{1cm}
+	8) 25\% dos universitários de São Paulo praticam esporte. Escolhendo-se ao acaso 15 desses estudantes, determine a probabilidade de:\\
+	a) Pelo menos 2 deles serem esportistas
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\geq$ 2) = 1 - $\mathbb{P}$(X < 2) = 1 - [$\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 0)]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - [C$_{15, 1}$ * 0,25$^1$ * 0,75$^{14}$ + C$_{15, 0}$ * 0,25$^0$ * 0,75$^{15}$]	
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) = 1 - [15 * 0,25 * 0,017818 + 1 * 1 * 0,01336] = 1 - [0,06682 + 0,01336]
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\geq$ 2) =	1 - 0,08018 = 0,9198
+	\end{center}
+	\vspace{1cm}
+	b) No mínimo 12 deles não serem esportistas
+	\vspace{0.5cm}\\
+	Y = Não ser esportista
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(Y $\geq$ 12) = 1 - $\mathbb{P}$(Y < 12) = $\mathbb{P}$(X $\leq$ 3)
+		\vspace{0.75cm}\\
+		$\mathbb{P}$(X $\leq$ 3) = $\mathbb{P}$(X = 3) + $\mathbb{P}$(X = 2) + $\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 0)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\leq$ 3) = C$_{15, 3}$ * 0,25$^3$ * 0,75$^{12}$ + C$_{15, 2}$ * 0,25$^2$ * 0,75$^{13}$\\ + C$_{15, 1}$ * 0,25$^1$ * 0,75$^{14}$ + C$_{15, 0}$ * 0,25$^0$ * 0,75$^{15}$
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\leq$ 3) = 455 * 0,015625 * 0,03168 + 35 * 0,0625 * 0,02376\\ 15 * 0,25 * 0,017818 + 1 * 1 * 0,01336
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X $\leq$ 3) = 0,22522 + 0,05197 + 0,06682 + 0,01336 = 0,35737
+	\end{center}
+\end{document}
