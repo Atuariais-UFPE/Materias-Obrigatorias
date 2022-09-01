@@ -1,0 +1,524 @@
+\documentclass[12pt,a4paper,draft,final,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\title{Lista 7}
+\usepackage{multirow}
+\usepackage{booktabs}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Curso de Ciências Atuariais}\\
+		\textbf{Disciplina Probabilidade 1- Professora Cristina}\\
+		\textbf{12/08/2022 - Exercícios de função de v.a. e distribuição conjunta}
+	\end{center}
+	1) O Quadro abaixo dá a distribuição de probabilidade conjunta das v. a. X e Y.
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}\hline
+			\multirow{2}*{Y} & \multicolumn{3}{|c|}{X}\\ \cline{2-4} 
+			& 1 & 2 & 3\\ \hline
+			0 & 0,1 & 0,1 & 0,1\\ \hline
+			1 & 0,2 & 0 & 0,3\\ \hline
+			2 & 0 & 0,1 & 0,1\\ \hline
+		\end{tabular}
+	\end{center}
+	a) Obtenha as distribuições de X+Y e de XY
+	\vspace{0.5cm}\\
+	S$_{x+y}$ = \{1, 2, 3, 4, 5\}\\
+	\begin{center}
+		\begin{tabular}{lll}
+			$\mathbb{P}$(X+Y = 1) = 0,1 & &	$\mathbb{P}$(X+Y = 2) = 0,1 + 0,2 = 0,3\vspace{0.5cm}\\ 
+			$\mathbb{P}$(X+Y = 3) = 0,1 + 0 + 0 = 0,1 & &
+			$\mathbb{P}$(X+Y = 4) = 0,3 + 0,1 = 0,4\vspace{0.5cm}\\ 
+			$\mathbb{P}$(X+Y = 5) = 0,1 & &\\
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	S$_{xy}$ = \{0, 1, 2, 3, 4, 6\}\\
+	\begin{center}
+		\begin{tabular}{lllll}
+			$\mathbb{P}$(XY = 0) = 0,1 + 0,1 + 0,1 = 0,3 & &	$\mathbb{P}$(XY = 1) = 0,2 & & $\mathbb{P}$(XY = 2) = 0 + 0 = 0
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(XY = 3) = 0,3 & &	$\mathbb{P}$(XY = 4) = 0,1 & & $\mathbb{P}$(XY = 6) = 0,1\\
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	b) Calcule E(X+Y), E(XY), V(X+Y) e V(XY)
+	\vspace{0.5cm}\\
+	\begin{center}
+		E(X+Y) = $1*0,1 + 2*0,3 + 3*0,1 + 4*0,4 + 5*0,1$ 
+		\vspace{0.25cm}\\
+		E(X+Y) = $0,1 + 0,6 + 0,3 + 1,6 + 0,5 = 3,1$
+		\vspace{1cm}\\
+		E$[(X+Y)^2] = 1^2*0,1 + 2^2*0,3 + 3^2*0,1 + 4^2*0,4 + 5^2*0,1$
+		\vspace{0.25cm}\\
+		E$[(X+Y)^2] = 0,1 + 1,2 + 0,9 + 6,4 + 2,5 = 11,1$	
+		\vspace{1cm}\\
+		V(X+Y) = $11,1 - 3,1^2 = 11,1 - 9,61 = 1,49$
+		\vspace{1cm}\\
+		E(XY) = $0*0,3 + 1*0,2 + 2*0 + 3*0,3 + 4*0,1 + 6*0,1$
+		\vspace{0.25cm}\\
+		E(XY) = $0 + 0,2 + 0 + 0,9 + 0,4 + 0,6 = 2,1$
+		\vspace{1cm}\\
+		E$[(XY)^2] = 0^2*0,3 + 1^2*0,2 + 2^2*0 + 3^2*0,3 + 4^2*0,1 + 6^2*0,1$
+		\vspace{0.25cm}
+		E$[(XY)^2] = 0 + 0,2 + 0 + 2,7 + 1,6 + 3,6 = 8,1$
+		\vspace{1cm}\\
+		V(X+Y) = $8,1 - 2,1^2 = 8,1 - 4,41 = 3,69$
+	\end{center}
+	\vspace{1cm}
+	2) Numa urna tem cinco bolas marcadas com os seguintes números: -1, 0, 0, 0, 1.	Retiram-se 3 bolas simultaneamente. X indica a soma dos números obtidos e Y o maior valor da trinca.\\
+	a) Determine a distribuição de probabilidade conjunta de (X,Y)
+	\vspace{0.5cm}\\
+	\[
+	S_{x} =
+	\begin{cases}
+	(0, 0, -1); (0, -1, 0); (-1, 0, 0) = -1 \\
+	(0, 0, 0);(0, 1, -1); (1, 0, -1); (1, -1, 0); (0, -1, 1); (-1, 0, 1); (-1, 1, 0) = 0\\
+	(0, 0, 1); (0, 1, 0); (1, 0, 0) = 1
+	\end{cases}
+	\]
+	\vspace{0.5cm}\\
+	\begin{center}
+		$\mathbb{P}$(X = -1) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*3 = (\dfrac{6}{60})*3 = \dfrac{18}{60}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 0) = $\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3} + (\dfrac{3}{5}*\dfrac{1}{4}*\dfrac{1}{3})*6 = \dfrac{6}{60} + (\dfrac{3}{60})*6 = \dfrac{6}{60} + \dfrac{18}{60} = \dfrac{24}{60}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 1) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*3 = (\dfrac{6}{60})*3 = \dfrac{18}{60}$
+	\end{center}
+	\vspace{1cm}
+	\[
+	S_{y} =
+	\begin{cases}
+	(0, 0, 0)(0, 0, -1); (0, -1, 0); (-1, 0, 0) = 0 \\
+	(0, 1, -1); (1, 0, -1); (1, -1, 0); (0, -1, 1);\\
+	(-1, 0, 1); (-1, 1, 0), (0, 0, 1); (0, 1, 0); (1, 0, 0) = 1
+	\end{cases}
+	\]
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X = 0) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*4 = (\dfrac{6}{60})*4 = \dfrac{24}{60}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 1) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*3 + (\dfrac{3}{5}*\dfrac{1}{4}*\dfrac{1}{3})*6 = (\dfrac{6}{60})*3 + (\dfrac{3}{60})*6 = \dfrac{18}{60} + \dfrac{18}{60} = \dfrac{36}{60}$
+		\vspace{1cm}\\
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			\multirow{2}*{Y} & \multicolumn{3}{|c|}{X} & \multirow{2}*{$\mathbb{P}$(Y = y)}\\ \cline{2-4}
+			& -1 & 0	& 1 &\\ \hline
+			0 & $\dfrac{18}{60}$ & $\dfrac{6}{60}$ & 0 & $\dfrac{24}{60}$\\ \hline
+			1 & 0 & $\dfrac{18}{60}$ & $\dfrac{18}{60}$ & $\dfrac{36}{60}$\\ \hline
+			$\mathbb{P}$(X = x) & $\dfrac{18}{60}$ & $\dfrac{24}{60}$ & $\dfrac{18}{60}$ & 1\\ \hline
+		\end{tabular}
+		\vspace{1cm}\\
+		$\mathbb{P}$(X = -1 $\cap$ Y = 0) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*3 = (\dfrac{6}{60})*3 = \dfrac{18}{60}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X = -1) = $\mathbb{P}$(X = -1 $\cap$ Y = 0) + $\mathbb{P}$(X = -1 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\dfrac{18}{60} = \dfrac{18}{60} + \mathbb{P}$(X = -1 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\mathbb{P}$(X = -1 $\cap$ Y = 1) = $\dfrac{18}{60} - \dfrac{18}{60} = 0$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X = 0 $\cap$ Y = 0) = $(\dfrac{3}{5}*\dfrac{2}{4}*\dfrac{1}{3})*3 = \dfrac{6}{60}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X = 0) = $\mathbb{P}$(X = 0 $\cap$ Y = 0) + $\mathbb{P}$(X = 0 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\dfrac{24}{60} = \dfrac{6}{60} + \mathbb{P}$(X = 0 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\mathbb{P}$(X = 0 $\cap$ Y = 1) = $\dfrac{24}{60} - \dfrac{6}{60} = \dfrac{18}{60}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(Y = 0) = $\mathbb{P}$(X = -1 $\cap$ Y = 0) + $\mathbb{P}$(X = 0 $\cap$ Y = 0) + $\mathbb{P}$(X = 1 $\cap$ Y = 0)\\
+		\vspace{0.25cm}
+		$\dfrac{24}{60} = \dfrac{18}{60} + \dfrac{6}{60} + \mathbb{P}$(X = 1 $\cap$ Y = 0)\\
+		\vspace{0.25cm}
+		$\mathbb{P}$(X = 1 $\cap$ Y = 0) = $\dfrac{24}{60} - \dfrac{18}{60} -\dfrac{6}{60} = 0$
+			\vspace{1cm}\\
+		$\mathbb{P}$(Y = 1) = $\mathbb{P}$(X = -1 $\cap$ Y = 1) + $\mathbb{P}$(X = 0 $\cap$ Y = 1) + $\mathbb{P}$(X = 1 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\dfrac{36}{60} = 0 + \dfrac{18}{60} + \mathbb{P}$(X = 1 $\cap$ Y = 1)\\
+		\vspace{0.25cm}
+		$\mathbb{P}$(X = 1 $\cap$ Y = 1) = $\dfrac{36}{60} - \dfrac{18}{60} = \dfrac{18}{60}$
+	\end{center}
+	\vspace{1cm}
+	b) Encontre E(X) e V(X)
+	\vspace{0.5cm}
+	\begin{center}
+		E(X) = $(-1)*\dfrac{18}{60} + 0*\dfrac{24}{60} + 1*\dfrac{18}{60} = \dfrac{-18}{60} + 0 + \dfrac{18}{60} = 0$ 
+		\vspace{0.5cm}\\
+		E(X$^2$) = $(-1)^2*\dfrac{18}{60} + 0^2*\dfrac{24}{60} + 1^2*\dfrac{18}{60} = \dfrac{18}{60} + 0 + \dfrac{18}{60} = \dfrac{36}{60}$
+		\vspace{0.5cm}\\
+		V(X) = $\dfrac{36}{60} - 0^2 = \dfrac{36}{60}$ 
+	\end{center}
+	\vspace{1cm}
+	c) Encontre a distribuição de probabilidade de X+Y
+	\vspace{0.5cm}
+	\[
+	S_{x+y} =
+	\begin{cases}
+	(-1, 0) = -1 \\
+	(-1, 1); (0, 0) = 0\\
+	(1, 0); (0, 1) = 1\\
+	(1, 1) =2
+	\end{cases}
+	\]
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X + Y = -1) = $\dfrac{18}{60}$\\
+		\vspace{0.5cm}
+		$\mathbb{P}$(X + Y = 0) = $0 + \dfrac{6}{60} = \dfrac{6}{60}$\\
+		\vspace{0.5cm}
+		$\mathbb{P}$(X + Y = 1) = $0 + \dfrac{18}{60} = \dfrac{18}{60}$\\
+		\vspace{0.5cm}
+		$\mathbb{P}$(X + Y = 2) = $\dfrac{18}{60} = \dfrac{18}{60}$\\
+	\end{center}
+	\vspace{1cm}
+	d) Encontre E(X+Y) e V(X+Y)
+	\begin{center}
+		\vspace{0.5cm}
+		E(X+Y) = $(-1)*\dfrac{18}{60} + 0*\dfrac{6}{60} + 1*\dfrac{18}{60} + 2*\dfrac{18}{60} = \dfrac{-18}{60} + 0 + \dfrac{18}{60} + \dfrac{36}{60} = \dfrac{36}{60} = \dfrac{3}{5}$
+		\vspace{0.5cm}\\
+		E[(X+Y)$^2$] = $(-1)^2*\dfrac{18}{60} + 0^2*\dfrac{6}{60} + 1^2*\dfrac{18}{60} + 2^2*\dfrac{18}{60} = \dfrac{18}{60} + 0 + \dfrac{18}{60} + \dfrac{72}{60} = \dfrac{108}{60} = \dfrac{9}{5}$
+		\vspace{0.5cm}\\
+		V(x+Y) = $\dfrac{9}{5} - (\dfrac{3}{5})^2 = \dfrac{45}{25} - \dfrac{9}{25} = \dfrac{36}{25}$
+	\end{center}
+	\vspace{1cm}
+	3) Numa urna tem cinco tiras de papel, numeradas 1,3 5, 5. 7. Uma tira é sorteada e recolocada na urna, Depois uma segunda tira é retirada. Sejam as v.a. X$_{1}$ e X$_{2}$ que representam o primeiro e o segundo número sorteado.\\
+	a) Determine a distribuição conjunta de (X$_{1}$, X$_{2}$)
+	\begin{center}
+		\begin{tabular}{ccc}
+			$\mathbb{P}$(X$_{1} = 1$) = $\dfrac{1}{5}$ & & $\mathbb{P}$(X$_{1} = 1$) = $\dfrac{1}{5}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1} = 3$) = $\dfrac{1}{5}$ & &
+			$\mathbb{P}$(X$_{2} = 3$) = $\dfrac{1}{5}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1} = 5$) = $\dfrac{2}{5}$ & & $\mathbb{P}$(X$_{2} = 5$) = $\dfrac{2}{5}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1} = 7$) = $\dfrac{1}{5}$ & &
+			$\mathbb{P}$(X$_{2} = 7$) = $\dfrac{1}{5}$
+		\end{tabular}
+		\vspace{1cm}\\
+		\begin{tabular}{|c|c|c|c|c|c|}\hline
+			\multirow{2}*{X$_{2}$} & \multicolumn{4}{|c|}{X$_{1}$} & \multirow{2}*{$\mathbb{P}$(X$_{2}$ = x)}\\ \cline{2-5}
+			& 1 & 3 & 5 & 7 &\\ \hline
+			1 & $\dfrac{1}{25}$ & $\dfrac{1}{25}$ & $\dfrac{2}{25}$ & $\dfrac{1}{25}$ & $\dfrac{1}{5}$\\ \hline
+			3 & $\dfrac{1}{25}$ & $\dfrac{1}{25}$ & $\dfrac{2}{25}$ & $\dfrac{1}{25}$ & $\dfrac{1}{5}$\\ \hline
+			5 & $\dfrac{2}{25}$ & $\dfrac{2}{25}$ & $\dfrac{4}{25}$ & $\dfrac{2}{25}$ & $\dfrac{2}{5}$\\ \hline
+			7 & $\dfrac{1}{25}$ & $\dfrac{1}{25}$ & $\dfrac{2}{25}$ & $\dfrac{1}{25}$ & $\dfrac{1}{5}$\\ \hline
+			$\mathbb{P}$(X$_{1}$ = x) & $\dfrac{1}{5}$ & $\dfrac{1}{5}$ & $\dfrac{2}{5}$ & $\dfrac{1}{5}$ & 1\\ \hline
+		\end{tabular}
+		\vspace{1cm}\\
+		\begin{tabular}{ccc}
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 1) = $\dfrac{2}{5}*\dfrac{1}{5} = \dfrac{2}{25}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 3) = $\dfrac{2}{5}*\dfrac{1}{5} = \dfrac{2}{25}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*\dfrac{1}{5} = \dfrac{1}{25}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{5} = \dfrac{2}{25}$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{5} = \dfrac{2}{25}$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 5) = $\dfrac{2}{5}*\dfrac{2}{5} = \dfrac{4}{25}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{5} = \dfrac{2}{25}$ \vspace{0.5cm}\\	
+		\end{tabular}
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 1) = $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = $\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$ + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7) = $\dfrac{5}{25}$ - ($\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$) = $\dfrac{1}{25}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 3) = $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = $\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$ + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7) = $\dfrac{5}{25}$ - ($\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$) = $\dfrac{1}{25}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 5) = $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{2}{5}$ = $\dfrac{2}{25} + \dfrac{2}{25} + \dfrac{4}{25}$ + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7) = $\dfrac{10}{25}$ - ($\dfrac{2}{25} + \dfrac{2}{25} + \dfrac{4}{25}$) = $\dfrac{2}{25}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 7) = $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = $\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$ + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7) = $\dfrac{5}{25}$ - ($\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$) = $\dfrac{1}{25}$
+	\end{center}
+	\vspace{1cm}
+	b) Encontre E(X$_{1}$ + X$_{2}$) e V(X$_{1}$ + X$_{2}$)
+	\vspace{0.5cm}
+		\[
+	S_{x+y} =
+	\begin{cases}
+	(1, 1) = 2 \\
+	(1, 3); (3, 1) = 4\\
+	(1, 5); (5, 1); (3, 3) = 6\\
+	(1, 7); (7, 1); (3, 5); (5, 3) = 8\\
+	(3,7); (7, 3); (5,5) = 10\\
+	(5, 7); (7,5) = 12\\
+	(7, 7) = 14
+	\end{cases}
+	\]
+	\begin{center}
+		\vspace{0.5cm}
+		E(X$_{1}$ + X$_{2}$) = $2*\dfrac{1}{25} + 4*\dfrac{2}{25} + 6*\dfrac{5}{25} + 8*\dfrac{6}{25} + 10*\dfrac{6}{25} + 12*\dfrac{4}{25} + 14*\dfrac{1}{25}$
+		\vspace{0.25cm}\\
+		E(X$_{1}$ + X$_{2}$) = $\dfrac{2}{25} + \dfrac{8}{25} + \dfrac{30}{25} + \dfrac{48}{25} + \dfrac{60}{25} + \dfrac{48}{25} + \dfrac{14}{25} = \dfrac{210}{25} = \dfrac{42}{5}$
+		\vspace{1cm}\\
+		E[(X$_{1}$ + X$_{2})^2$] = $2^2*\dfrac{1}{25} + 4^2*\dfrac{2}{25} + 6^2*\dfrac{5}{25} + 8^2*\dfrac{6}{25} + 10^2*\dfrac{6}{25} + 12^2*\dfrac{4}{25} + 14^2*\dfrac{1}{25}$
+		\vspace{0.25cm}\\
+		E[(X$_{1}$ + X$_{2})^2$] = $\dfrac{4}{25} + \dfrac{32}{25} + \dfrac{180}{25} + \dfrac{384}{25} + \dfrac{600}{25} + \dfrac{576}{25} + \dfrac{196}{25} = \dfrac{1.972}{25}$
+		\vspace{1cm}\\
+		V(X$_{1}$ + X$_{2}$) = $\dfrac{1.972}{25} - (\dfrac{42}{5})^2 = \dfrac{1.972}{25} - \dfrac{1.764}{25} = \dfrac{208}{25}$
+	\end{center}
+	\vspace{1cm}
+	c) Refaça a questão se a retirada for sem reposição
+	\vspace{0.5cm}\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}\hline
+			\multirow{2}*{X$_{2}$} & \multicolumn{4}{|c|}{X$_{1}$} & \multirow{2}*{$\mathbb{P}$(X$_{2}$ = x)}\\ \cline{2-5}
+			& 1 & 3 & 5 & 7 &\\ \hline
+			1 & 0 & $\dfrac{1}{20}$ & $\dfrac{2}{20}$ & $\dfrac{1}{20}$ & $\dfrac{1}{5}$\\ \hline
+			3 & $\dfrac{1}{20}$ & 0 & $\dfrac{2}{20}$ & $\dfrac{1}{20}$ & $\dfrac{1}{5}$\\ \hline
+			5 & $\dfrac{2}{20}$ & $\dfrac{2}{20}$ & $\dfrac{2}{20}$ & $\dfrac{2}{20}$ & $\dfrac{2}{5}$\\ \hline
+			7 & $\dfrac{1}{25}$ & $\dfrac{1}{25}$ & $\dfrac{2}{25}$ & 0 & $\dfrac{1}{5}$\\ \hline
+			$\mathbb{P}$(X$_{1}$ = x) & $\dfrac{1}{5}$ & $\dfrac{1}{5}$ & $\dfrac{2}{5}$ & $\dfrac{1}{5}$ & 1\\ \hline
+		\end{tabular}
+	\vspace{1cm}\\
+		\begin{tabular}{ccc}
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*0 = 0$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*\dfrac{1}{4} = \dfrac{1}{20}$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 1) = $\dfrac{2}{5}*\dfrac{1}{4} = \dfrac{2}{20}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 1) = $\dfrac{1}{5}*\dfrac{1}{4} = \dfrac{1}{20}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*\dfrac{1}{4} = \dfrac{1}{20}$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*0 = 0$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 3) = $\dfrac{2}{5}*\dfrac{1}{4} = \dfrac{2}{20}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 3) = $\dfrac{1}{5}*\dfrac{1}{4} = \dfrac{1}{20}$ \vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{4} = \dfrac{2}{20}$ & & $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{4} = \dfrac{2}{20}$
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 5) = $\dfrac{2}{5}*\dfrac{1}{4} = \dfrac{2}{20}$ & &
+			$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 5) = $\dfrac{1}{5}*\dfrac{2}{4} = \dfrac{2}{20}$ \vspace{0.5cm}\\	
+		\end{tabular}
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 1) = $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = 0 + $\dfrac{1}{20} + \dfrac{2}{20}$ + $\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 1 $\cap$ X$_{2}$ = 7) = $\dfrac{4}{20}$ - ($\dfrac{1}{20} + \dfrac{2}{20}$) = $\dfrac{1}{20}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 3) = $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = $\dfrac{1}{20} + 0 + \dfrac{2}{20}$ + $\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 3 $\cap$ X$_{2}$ = 7) = $\dfrac{4}{20}$ - ($\dfrac{1}{20} + \dfrac{2}{20}$) = $\dfrac{1}{20}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 5) = $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{2}{5}$ = $\dfrac{2}{20} + \dfrac{2}{20} + \dfrac{2}{20}$ + $\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 5 $\cap$ X$_{2}$ = 7) = $\dfrac{8}{20}$ - ($\dfrac{2}{20} + \dfrac{2}{20} + \dfrac{2}{20}$) = $\dfrac{2}{20}$
+		\vspace{1cm}\\
+		$\mathbb{P}$(X$_{1}$ = 7) = $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 1) + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 3)\\
+		+ $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 5) + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\dfrac{1}{5}$ = $\dfrac{1}{20} + \dfrac{1}{20} + \dfrac{2}{20}$ + $\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7)
+		\vspace{0.25cm}\\
+		$\mathbb{P}$(X$_{1}$ = 7 $\cap$ X$_{2}$ = 7) = $\dfrac{4}{20}$ - ($\dfrac{1}{25} + \dfrac{1}{25} + \dfrac{2}{25}$) = 0
+	\end{center}
+	\vspace{1cm}
+	b) Encontre E(X$_{1}$ + X$_{2}$) e V(X$_{1}$ + X$_{2}$)
+	\vspace{0.5cm}
+	\[
+	S_{x+y} =
+	\begin{cases}
+	(1, 1) = 2 \\
+	(1, 3); (3, 1) = 4\\
+	(1, 5); (5, 1); (3, 3) = 6\\
+	(1, 7); (7, 1); (3, 5); (5, 3) = 8\\
+	(3,7); (7, 3); (5,5) = 10\\
+	(5, 7); (7,5) = 12\\
+	(7, 7) = 14
+	\end{cases}
+	\]
+	\begin{center}
+		\vspace{0.5cm}
+		E(X$_{1}$ + X$_{2}$) = $2*0 + 4*\dfrac{2}{20} + 6*\dfrac{4}{20} + 8*\dfrac{6}{20} + 10*\dfrac{4}{20} + 12*\dfrac{2}{20} + 14*0$
+		\vspace{0.25cm}\\
+		E(X$_{1}$ + X$_{2}$) = $0 + \dfrac{8}{20} + \dfrac{24}{20} + \dfrac{48}{20} + \dfrac{40}{20} + \dfrac{24}{20} + 0 = \dfrac{140}{20} = \dfrac{35}{5}$
+		\vspace{1cm}\\
+		E[(X$_{1}$ + X$_{2})^2$] = $2^2*0 + 4^2*\dfrac{2}{20} + 6^2*\dfrac{4}{20} + 8^2*\dfrac{6}{20} + 10^2*\dfrac{4}{20} + 12^2*\dfrac{2}{20} + 14^2*0$
+		\vspace{0.25cm}\\
+		E[(X$_{1}$ + X$_{2})^2$] = $0 + \dfrac{32}{20} + \dfrac{144}{20} + \dfrac{384}{20} + \dfrac{400}{20} + \dfrac{288}{20} + 0 = \dfrac{1.248}{20} = \dfrac{312}{5}$
+		\vspace{1cm}\\
+		V(X$_{1}$ + X$_{2}$) = $\dfrac{312}{5} - (\dfrac{35}{5})^2 = \dfrac{1.560}{25} - \dfrac{1.225}{25} = \dfrac{335}{25} = \dfrac{67}{5}$
+	\end{center}
+	\vspace{1cm}
+	d) Verifique, em ambos os casos se X$_{1}$ e X$_{2}$ são independentes
+	\vspace{0.5cm}\\
+	\begin{center}
+		E(X$_{1}$) = $1*\dfrac{1}{5} + 3*\dfrac{1}{5} + 5*\dfrac{2}{5} + 7*\dfrac{1}{5} = \dfrac{1}{5} + \dfrac{3}{5} + \dfrac{10}{5}
+		+ \dfrac{7}{5} = \dfrac{21}{5}$
+		\vspace{0.5cm}\\
+		E(X$_{1})^2$ = $1^2*\dfrac{1}{5} + 3^2*\dfrac{1}{5} + 5^2*\dfrac{2}{5} + 7^2*\dfrac{1}{5} = \dfrac{1}{5} + \dfrac{9}{5} + \dfrac{50}{5} + \dfrac{49}{5} = \dfrac{109}{5}$
+		\vspace{0.5cm}\\
+		V(X$_{1}$) = $\dfrac{109}{5} - (\dfrac{21}{5})^2 = \dfrac{545}{25} - \dfrac{441}{25} = \dfrac{104}{25}$
+		\vspace{1cm}\\
+		E(X$_{2}$) = $1*\dfrac{1}{5} + 3*\dfrac{1}{5} + 5*\dfrac{2}{5} + 7*\dfrac{1}{5} = \dfrac{1}{5} + \dfrac{3}{5} + \dfrac{10}{5}
+		+ \dfrac{7}{5} = \dfrac{21}{5}$
+		\vspace{0.5cm}\\
+		E(X$_{2})^2$ = $1^2*\dfrac{1}{5} + 3^2*\dfrac{1}{5} + 5^2*\dfrac{2}{5} + 7^2*\dfrac{1}{5} = \dfrac{1}{5} + \dfrac{9}{5} + \dfrac{50}{5} + \dfrac{49}{5} = \dfrac{109}{5}$
+		\vspace{0.5cm}\\
+		V(X$_{2}$) = $\dfrac{109}{5} - (\dfrac{21}{5})^2 = \dfrac{545}{25} - \dfrac{441}{25} = \dfrac{104}{25}$
+		\vspace{1cm}\\
+	\end{center}
+	COM REPOSIÇÃO
+	\vspace{0.5cm}\\
+	\begin{center}
+		V(X$_{1}$ + X$_{2}$) = $\dfrac{208}{25}$ =
+		V(X$_{1}$) + V($_{2}$) = $\dfrac{104}{25} + \dfrac{104}{25} = \dfrac{108}{25}$
+	\end{center}
+	\vspace{0.5cm}
+	Os eventos X$_{1}$ e X$_{2}$ são independentes
+	\vspace{1cm}\\
+	SEM REPOSIÇÃO
+	\vspace{0.5cm}\\
+	\begin{center}
+		V(X$_{1}$ + X$_{2}$) = $\dfrac{67}{5}$ $\neq$
+		V(X$_{1}$) + V($_{2}$) = $\dfrac{104}{25} + \dfrac{104}{25} = \dfrac{108}{25}$
+	\end{center}
+	\vspace{0.5cm}
+	Os eventos X$_{1}$ e X$_{2}$ não são independentes
+	\vspace{1cm}\\
+	4) Considerando a distribuição de probabilidade conjunta de (X, Y) da questão 1.\\
+	a) Encontre as distribuições de probabilidade das variáveis: X+3 e 2Y
+	\vspace{0.5cm}\\
+	U = X+3
+	\vspace{0.5cm}\\
+	S$_{u}$ = \{4, 5, 6\}
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(U = 4) = 0,1 + 0,2 + 0 = 0,3 
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(U = 5) = 0,1 + 0 + 0,1 = 0,2 
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 1) = 0,1 + 0,3 + 0,1 = 0,5 
+	\end{center}
+	\vspace{1cm}
+	V = 2Y
+	\vspace{0.5cm}\\
+	S$_{v}$ = \{0, 2, 4\}
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(V = 0) = 0,1 + 0,1 + 0,1 = 0,3 
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(V = 2) = 0,2 + 0 + 0,3 = 0,5 
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(V = 4) = 0 + 0,1 + 0,1 = 0,2 
+	\end{center}
+	\vspace{1cm}
+	b) Calcule a esperança e variância de X+3 e de 2Y
+	\vspace{0.5cm}\\
+	U = X+3
+	\begin{center}
+		\vspace{0.5cm}
+		E(U) = 4*0,3 + 5*0,2 + 6*0,5 = 1,2 + 1 + 3 = 5,2
+		\vspace{0.5cm}\\
+		E(U$^2$) = $4^2*0,3 + 5^2*0,2 + 6^2*0,5$ = 4,8 + 5 + 18 = 27,8
+		\vspace{0.5cm}\\
+		V(U) = 27,8 - $5,2^2$ = 27,8 - 27,04 = 0,76
+	\end{center}
+	\vspace{1cm}
+	V = 2Y
+	\begin{center}
+		\vspace{0.5cm}
+		E(V) = 0*0,3 + 2*0,5 + 4*0,2 = 0 + 1 + 0,8 = 1,8
+		\vspace{0.5cm}\\
+		E(U$^2$) = $0^2*0,3 + 2^2*0,5 + 4^2*0,2$ = 0 + 2 + 3,2 = 5,2
+		\vspace{0.5cm}\\
+		V(U) = 5,2 - $1,8^2$ = 5,2 - 3,24 = 1,96
+	\end{center}
+	\vspace{1cm}
+	5)Considere a distribuição conjunta de X e Y, parcialmente conhecida, dada por:\\
+	a) Complete a Tabela
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			\multirow{2}{*}{Y} & \multicolumn{3}{|c|}{X} & \multirow{2}{*}{$\mathbb{P}$(Y = y)}\\ \cline{2-4}
+			& -1 & 0 & 1 &\\ \hline
+			-1 & $\dfrac{1}{12}$ & $\mathbf{\dfrac{2}{12}}$ & $\dfrac{4}{12}$ & $\dfrac{7}{12}$\\ \hline
+			0 & $\mathbf{0}$ & $\dfrac{1}{12}$ & $\mathbf{0}$ & $\mathbf{\dfrac{1}{12}}$\\ \hline
+			1 & $\dfrac{2}{12}$ & $\mathbf{\dfrac{1}{12}}$ & $\dfrac{1}{12}$ & $\mathbf{\dfrac{4}{12}}$\\ \hline
+			$\mathbb{P}$(X = x) & $\dfrac{3}{12}$ & $\dfrac{4}{12}$ & $\dfrac{5}{12}$ & 1\\ \hline
+		\end{tabular}
+	\vspace{1cm}\\
+	$\mathbb{P}$(X = -1) = $\mathbb{P}$(X = -1 $\cap$ Y = -1) + $\mathbb{P}$(X = -1 $\cap$ Y = 0) + $\mathbb{P}$(X = -1 $\cap$ Y = 1)
+	\vspace{0.25cm}\\
+	$\dfrac{3}{12}$ = $\dfrac{1}{12} + \mathbb{P}($X = -1 $\cap$ Y = 0$) + \dfrac{2}{12}$
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(X = -1 $\cap$ Y = 0) = $\dfrac{3}{12}$ - ($\dfrac{1}{12} + \dfrac{2}{12}$) = 0
+	\vspace{1cm}\\
+	$\mathbb{P}$(Y = -1) = $\mathbb{P}$(X = -1 $\cap$ Y = -1) + $\mathbb{P}$(X = 0 $\cap$ Y = -1) + $\mathbb{P}$(X = 1 $\cap$ Y = -1)
+	\vspace{0.25cm}\\
+	$\dfrac{7}{12}$ = $\dfrac{1}{12}$ + $\mathbb{P}$(X = 0 $\cap$ Y = -1) + $\dfrac{4}{12}$
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(X = 0 $\cap$ Y = -1) = $\dfrac{7}{12}$ - ($\dfrac{1}{12} + \dfrac{4}{12}$) = $\dfrac{2}{12}$
+	\vspace{1cm}\\
+	$\mathbb{P}$(X = 1) = $\mathbb{P}$(X = 1 $\cap$ Y = -1) + $\mathbb{P}$(X = 1 $\cap$ Y = 0) + $\mathbb{P}$(X = 1 $\cap$ Y = 1)
+	\vspace{0.25cm}\\
+	$\dfrac{5}{12}$ = $\dfrac{4}{12} + \mathbb{P}($X = 1 $\cap$ Y = 0$) + \dfrac{1}{12}$
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(X = 1 $\cap$ Y = 0) = $\dfrac{5}{12}$ - ($\dfrac{4}{12} + \dfrac{1}{12}$) = 0
+	\vspace{1cm}\\
+	$\mathbb{P}$(Y = 0) = $\mathbb{P}$(X = -1 $\cap$ Y = 0) + $\mathbb{P}$(X = 0 $\cap$ Y = 0) + $\mathbb{P}$(X = 1 $\cap$ Y = 0)
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(Y = 0) = 0 + $\dfrac{1}{12}$ + 0 = $\dfrac{1}{12}$
+	\vspace{1cm}\\
+	$\mathbb{P}$(X = 0) = $\mathbb{P}$(X = 0 $\cap$ Y = -1) + $\mathbb{P}$(X = 0 $\cap$ Y = 0) + $\mathbb{P}$(X = 0 $\cap$ Y = 1)
+	\vspace{0.25cm}\\
+	$\dfrac{4}{12}$ = $\dfrac{2}{12} + \dfrac{1}{12} + \mathbb{P}$(X = 0 $\cap$ Y = 1)
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(X = 0 $\cap$ Y = 1) = $\dfrac{4}{12}$ - ($\dfrac{2}{12} + \dfrac{1}{12}$) = $\dfrac{1}{12}$
+	\vspace{1cm}\\
+	$\mathbb{P}$(Y = 1) = $\mathbb{P}$(X = -1 $\cap$ Y = 1) + $\mathbb{P}$(X = 0 $\cap$ Y = 1) + $\mathbb{P}$(X = 1 $\cap$ Y = 1)
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(Y = 1) = $\dfrac{2}{12} + \dfrac{1}{12} + \dfrac{1}{12} = \dfrac{4}{12}$
+	\end{center}
+	\vspace{1cm}
+	b) Encontre a distribuição de probabilidade de X + Y
+		\vspace{0.5cm}
+	\[
+	S_{x+y} =
+	\begin{cases}
+	(-1, -1) = -2 \\
+	(-1, 0); (0, -1) = -1\\
+	(-1, 1); (0, 0); (1, -1) = 0\\
+	(0, 1); (1, 0) = 1\\
+	(1,1) = 2
+	\end{cases}
+	\]
+	\vspace{0.5cm}
+	$\mathbb{P}$(X + Y = -2) = $\dfrac{1}{12}$\\
+	\vspace{0.5cm}
+	$\mathbb{P}$(X + Y = -1) = $0 + \dfrac{2}{12} = \dfrac{2}{12}$\\
+	\vspace{0.5cm}
+	$\mathbb{P}$(X + Y = 0) = $\dfrac{2}{12} + \dfrac{1}{12} + \dfrac{4}{12} = \dfrac{7}{12}$\\
+	\vspace{0.5cm}
+	$\mathbb{P}$(X + Y = 1) = $\dfrac{1}{12} + 0 = \dfrac{1}{12}$\\
+	\vspace{0.5cm}
+	$\mathbb{P}$(X + Y = 2) = $\dfrac{1}{12}$
+	\vspace{1cm}\\
+	c) Verifique se X e Y são independentes
+	\begin{center}
+		$\mathbb{P}$(X = -1 $\cap$ Y = -1) = $\dfrac{1}{12} \neq$ $\mathbb{P}$(X = -1)*$\mathbb{P}$(Y = -1) = $\dfrac{3}{12}*\dfrac{7}{12} = \dfrac{21}{144} = \dfrac{7}{48}$ 
+	\end{center}
+	\vspace{0.5cm}
+	Os eventos X e Y não são independentes
+\end{document}
