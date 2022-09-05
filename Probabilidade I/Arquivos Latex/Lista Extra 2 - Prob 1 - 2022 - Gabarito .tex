@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\title{Lista Extra 2}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Exercícios para aula}
+		\textbf{Distribuição Geométrica 26/08/2022}
+	\end{center}
+	1 - As cinco primeiras repetições de um experimento custam \$10,00 cada. Todas as repetições subsequentes custam \$5,00 cada. Suponha que o experimento seja repetido até que o primeiro sucesso ocorra. Se a probabilidade de sucesso de uma reétição é igual a 0,9, e se as repetições são independentes. Qual o custo esperado?
+	\vspace{0.5cm}\\
+	Y =  Obter sucesso no experimento
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(Y = s) = 0,9
+		\vspace{1cm}\\
+	\end{center}
+	X = Obter o primeiro sucesso no experimento
+	\begin{center}
+		\vspace{0.5cm}
+		E(X) = $\dfrac{1}{p}$ = $\dfrac{1}{0,9}$ = 1,111...
+		\vspace{1cm}\\
+		Custo(X) = $\sum_{i=1}^{5}\$10*x_{i} + \sum_{i=6}^{\infty}\$5*x_{i}$
+		\vspace{0.5cm}\\
+		Custo(1,111...) = \$11,11
+	\end{center}
+	\vspace{1cm}
+	2 - No callcenter de uma empresa distribuidora de telefonia, apenas 5\% das chamadas são relacionadas a reclamações sobre erros nas faturas emitidas pela empresa.
+	a) Qual a probabilidade da primeira reclamação sobre erro na fatura emitida da conta ocorrer até a 2ª chamada?
+	\vspace{0.5cm}\\
+	Y =  Um chamada ser sobre erros na fatura
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(Y = s) = 5\% = 0,05
+		\vspace{1cm}\\
+	\end{center}
+	X = Obter a primeira chamada sobre erros na fatura
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X $\leq$ 2) = $\mathbb{P}$(X = 1) + $\mathbb{P}$(X = 2) = 0,05 + 0,95 * 0,05 = 0,0975 		
+	\end{center}
+		\vspace{1cm}
+	b) A média e o desvio padrão dessa variável aleatória?
+	\vspace{0.5cm`}
+	\begin{center}	
+		E(X) = $\dfrac{1}{p}$ = $\dfrac{1}{0,05}$ = 20
+		\vspace{1cm}\\
+		E(X) = $\dfrac{1 - p}{p^{2}}$ = $\dfrac{1 - 0,05}{0,05^2}$ = 380
+	\end{center}
+	\vspace{1cm}
+	3 - Em seu caminho matinal, você se aproxima de um determinado sinal de trânsito, que está verde em 20\% do tempo. Suponha que cada manhã represente uma tentativa independente.\\
+	a) Qual é a probabilidade de que a primeira manhã que a luz esteja verde seja a quarta manhã que você se aproxima?
+	\vspace{0.5cm}\\
+	Y =  O sinal estar verde durante a caminhada
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(Y = s) = 20\% = 0,2
+		\vspace{1cm}\\
+	\end{center}
+	X = Obter o primeiro sinal verde durante a caminhada
+	\begin{center}
+		\vspace{0.5cm}
+		$\mathbb{P}$(X = 4) = $0,8^{3} * 0,2$ = 0,1024
+	\end{center}
+	\vspace{1cm}
+	b) Qual a probabilidade de que a luz não esteja verde durante exatamente 10 manhãs consecutivas?
+	\vspace{0.5cm}\\
+	Z =  O sinal não estar verde durante a caminhada
+	\begin{center}
+		$\mathbb{P}$(X = s) = 0,8
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 10) = $0,8^{10}$ = 0,10737
+	\end{center}
+\end{document}
