@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\usepackage{multirow}
+\title{Lista Extra 4}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Exercício de Variável Bidimensional Discreta Independente 30/09/2022}
+	\end{center}
+	Considere a distribuição conjunta (X ,Y) dada por:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			\multirow{2}{*}{Y} & \multicolumn{3}{c|}{X} & \multirow{2}{*}{$\mathbb{P}$(Y = y)}\\ \cline{2-4}
+			& -1 & 0 & 1 & \\ \hline
+			-1 & $\dfrac{1}{12}$ & & & \\ \hline
+			0 & & & & $\dfrac{1}{3}$\\ \hline
+			1 & $\dfrac{1}{4}$ & & $\dfrac{1}{4}$ & \\ \hline
+			$\mathbb{P}$(X = x) & & & & 1\\ \hline
+		\end{tabular}
+	\end{center}
+\vspace{1cm}
+a) Sabendo que X e Y são independentes, complete a tabela da distribuição de probabilidade.\\
+\vspace{1cm}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|} \hline
+		\multirow{2}{*}{Y} & \multicolumn{3}{c|}{X} & \multirow{2}{*}{$\mathbb{P}$(Y = y)}\\ \cline{2-4}
+		& -1 & 0 & 1 & \\ \hline
+		-1 & $\dfrac{1}{12}$ & x & t & c \\ \hline
+		0 & u & y & v & $\dfrac{1}{3}$\\ \hline
+		1 & $\dfrac{1}{4}$ & z & $\dfrac{1}{4}$ & d \\ \hline
+		$\mathbb{P}$(X = x) & a & b & a & 1\\ \hline
+	\end{tabular}
+	\vspace{1cm}\\
+	$\dfrac{1}{12} + u + \dfrac{1}{4} =  a$
+	\vspace{0.25cm}\\
+	$\dfrac{1}{12} + \dfrac{1}{3} * a + \dfrac{1}{4} =  a$
+	\vspace{0.25cm}\\
+	$\dfrac{2a}{3} =  \dfrac{4}{12}$
+	\vspace{0.25cm}\\
+	$a =  \dfrac{2}{4} = \dfrac{1}{2}$
+	\vspace{1cm}\\
+	u = $\dfrac{1}{3} * a$
+	\vspace{0.25cm}\\
+	u = $\dfrac{1}{3} * \dfrac{1}{2} = \dfrac{1}{6}$
+	\vspace{1cm}\\
+	v = $\dfrac{1}{3} * a$
+	\vspace{0.25cm}\\
+	v = $\dfrac{1}{3} * \dfrac{1}{2} = \dfrac{1}{6}$
+	\vspace{1cm}\\
+	t = c * a
+	\vspace{0.25cm}\\
+	t = $\dfrac{1}{6} * \dfrac{1}{2} = \dfrac{1}{12}$
+	\vspace{1cm}\\
+	a + b + a = 1
+	\vspace{0.25cm}\\
+	$\dfrac{1}{2} + b + \dfrac{1}{2} = 1$
+	\vspace{0.25cm}\\
+	$b = 1 - \dfrac{2}{2} = 1 - 1 = 0$
+	\vspace{1cm}\\
+	a * d = $\dfrac{1}{4}$
+	\vspace{0.25cm}\\
+	$\dfrac{1}{2}$ * d = $\dfrac{1}{4}$
+	\vspace{0.25cm}\\
+	d = $\dfrac{1}{4} * \dfrac{2}{1} = \dfrac{2}{4} = \dfrac{1}{2}$
+	\vspace{1cm}\\
+	c + $\dfrac{1}{3} + d = 1$
+	\vspace{0.25cm}\\
+	c + $\dfrac{1}{3} + \dfrac{1}{2} = 1$
+	\vspace{0.25cm}\\
+	c = 1 - $\dfrac{5}{6} = \dfrac{1}{6}$
+	\vspace{1cm}\\
+	c = $\dfrac{1}{12} + x + t$
+	\vspace{0.25cm}\\
+	$\dfrac{1}{6} = \dfrac{1}{12} + x + \dfrac{1}{12}$
+	\vspace{0.25cm}\\
+	$x= \dfrac{1}{6} - \dfrac{2}{12} = \dfrac{1}{6} - \dfrac{1}{6} = 0$
+	\vspace{1cm}\\
+	$\dfrac{1}{3} = u + y + v$
+	\vspace{0.25cm}\\
+	$\dfrac{1}{3} = \dfrac{1}{6} + y + \dfrac{1}{6}$
+	\vspace{0.25cm}\\
+	$y= \dfrac{1}{3} - \dfrac{2}{6} = \dfrac{1}{3} - \dfrac{1}{3} = 0$
+	\vspace{1cm}\\
+	d = $\dfrac{1}{4} + z + \dfrac{1}{4}$
+	\vspace{0.25cm}\\
+	$\dfrac{1}{2} = \dfrac{2}{4} + z$
+	\vspace{0.25cm}\\
+	$z = \dfrac{1}{2} - \dfrac{1}{2} = 0$
+	\vspace{1cm}\\
+	\begin{tabular}{|c|c|c|c|c|} \hline
+		\multirow{2}{*}{Y} & \multicolumn{3}{c|}{X} & \multirow{2}{*}{$\mathbb{P}$(Y = y)}\\ \cline{2-4}
+		& -1 & 0 & 1 & \\ \hline
+		-1 & $\dfrac{1}{12}$ & 0 & $\dfrac{1}{12}$ & $\dfrac{1}{6}$\\ \hline
+		0 & $\dfrac{1}{6}$ & 0 & $\dfrac{1}{6}$ & $\dfrac{1}{3}$\\ \hline
+		1 & $\dfrac{1}{4}$ & 0 & $\dfrac{1}{4}$ & $\dfrac{1}{2}$\\ \hline
+		$\mathbb{P}$(X = x) & $\dfrac{1}{2}$ & 0 & $\dfrac{1}{2}$ & 1\\ \hline
+	\end{tabular}
+\end{center}
+\vspace{1cm}
+b)Encontre E(X | Y = 0)
+\vspace{1cm}\\
+\begin{center}
+	\begin{tabular}{c|c}
+		X & E(X | Y = 0)\\ \hline
+		-1 & $0 * 0 = 0$\\ \hline
+		0 & $0 * 0 = 0$\\ \hline
+		1 & $0 * 0 = 0$\\
+	\end{tabular}
+\vspace{1cm}\\
+E(X | Y = 0) = 0
+\end{center}
+\end{document}
