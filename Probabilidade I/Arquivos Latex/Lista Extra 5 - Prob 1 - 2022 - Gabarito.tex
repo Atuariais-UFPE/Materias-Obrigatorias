@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.0cm]{geometry}
+\title{Lista Extra 5}
+\usepackage{multirow}
+\usepackage{booktabs}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Exercício de Variável Bidimensional Discreta Independente 10/10/2022}
+	\end{center}
+	Existe numa urna 5 bolas numeradas: -1, -1, 0, 1, 1. Serão retiradas 2 bolas simultaneamente (uma a uma sem reposição). Considere:\\
+	X =  Soma dos números\\
+	Y = diferença em módulo (valor absoluto dos números)\\
+	W = X - Y\\
+	a)	Encontre E(X | Y = 0)\\
+	\vspace{0.25cm}
+	\begin{center}
+		X = B$_{1}$ + B$_{2}$
+		\vspace{0.25cm}\\
+		Y = |B$_{1}$| - |B$_{2}$|
+		\vspace{1cm}\\
+		\begin{tabular}{ccccc}
+			B$_{1}$ & B$_{2}$ & X & Y & $\mathbb{P}$(B$_{1}$ = b$_{1}$ $\cap$ B$_{2}$ = b$_{2}$)\\ \midrule
+			-1 & -1 & -2 & 0 & $\dfrac{2}{5} * \dfrac{1}{4} = \dfrac{2}{20}$\\ \midrule
+			-1 & 0 & -1 & 1 & $\dfrac{2}{5} * \dfrac{1}{4} = \dfrac{2}{20}$\\ \midrule
+			-1 & 1 & 0 & 0 & $\dfrac{2}{5} * \dfrac{2}{4} = \dfrac{4}{20}$\\ \midrule
+			0 & -1 & -1 & -1& $\dfrac{1}{5} * \dfrac{2}{4} = \dfrac{2}{20}$\\ \midrule 
+			0 & 1 & 1 & -1 & $\dfrac{1}{5} * \dfrac{2}{4} = \dfrac{2}{20}$\\ \midrule 
+			1 & -1 & -2 & 0 & $\dfrac{2}{5} * \dfrac{2}{4} = \dfrac{4}{20}$\\ \midrule
+			1 & 0 & 1 & 1 & $\dfrac{2}{5} * \dfrac{1}{4} = \dfrac{2}{20}$\\ \midrule
+			1 & 1 & 2 & 0 & $\dfrac{2}{5} * \dfrac{1}{4} = \dfrac{2}{20}$\\ \midrule
+		\end{tabular}
+		\vspace{1cm}\\
+		\begin{tabular}{ccccccc}
+			\multirow{2}{*}{Y} & \multicolumn{5}{c}{X} & $\mathbb{P}$(Y = y)\\ \cmidrule{2-6}
+			& -2 & -1 & 0 & 1 & 2 &\\ \midrule
+			-1 & 0 & $\dfrac{2}{20}$ & 0 & $\dfrac{2}{20}$ & 0 & $\dfrac{4}{20}$\\ \midrule
+			0 & $\dfrac{6}{20}$ & 0 & $\dfrac{4}{20}$ & 0 & $\dfrac{2}{20}$ & $\dfrac{12}{20}$\\ \midrule
+			1 & 0 & $\dfrac{2}{20}$ & 0 & $\dfrac{2}{20}$ & 0 & $\dfrac{4}{20}$\\ \midrule
+			$\mathbb{P}$(X = x) & $\dfrac{6}{20}$ & $\dfrac{4}{20}$ & $\dfrac{4}{20}$ & $\dfrac{4}{20}$ & $\dfrac{2}{20}$ & 1\\
+		\end{tabular}
+		\vspace{1cm}\\
+		\begin{tabular}{cc}
+			X & $\mathbb{P}$(X | Y = 0)\\ \midrule
+			-2 & $\dfrac{\dfrac{6}{20}}{\dfrac{12}{20}} = \dfrac{3}{6}$\\ \midrule
+			-1 & $\dfrac{0}{\dfrac{12}{20}} = 0$\\ \midrule
+			0 & $\dfrac{\dfrac{4}{20}}{\dfrac{12}{20}} = \dfrac{2}{6}$\\ \midrule
+			1 & $\dfrac{0}{\dfrac{12}{20}} = 0$\\ \midrule
+			2 & $\dfrac{\dfrac{2}{20}}{\dfrac{12}{20}} = \dfrac{1}{6}$\\ \midrule
+		\end{tabular}
+		\vspace{1cm}\\
+		E(X | Y = 0) = $ -2 * \dfrac{3}{6} + (-1) * 0 + 0 * \dfrac{2}{6} + 1 * 0 + 2 * \dfrac{1}{6}$
+		\vspace{0.25cm}\\
+		E(X | Y = 0) = $-\dfrac{6}{6} + 0 + 0 + 0 + \dfrac{2}{6} = -\dfrac{4}{6}$
+	\end{center}
+	\vspace{1cm}
+	b) Encontre E(W) e V(W)
+	\begin{center}
+		\begin{tabular}{ccc}
+			X & Y & W\\ \midrule
+			-2 & 0 & -2\\ \midrule
+			-1 & 1 & -2\\ \midrule
+			0 & 0 & 0\\ \midrule
+			-1 & -1 & 0\\ \midrule
+			1 & -1 & 2\\ \midrule
+			-2 & 0 & -2\\ \midrule
+			1 & 1 & 0\\ \midrule
+			2 & 0 & 2\\ \midrule
+		\end{tabular}
+	\vspace{1cm}\\
+	E(W) = $-2 * (\dfrac{2}{20} + \dfrac{2}{20} + \dfrac{4}{20}) + 0 * (\dfrac{4}{20} + \dfrac{2}{20} + \dfrac{2}{20}) + 2 * (\dfrac{2}{20} + \dfrac{2}{20})$
+	\vspace{0.25cm}\\
+	E(W) = $-\dfrac{16}{20} + 0 + \dfrac{8}{20} = -\dfrac{8}{16}$
+	\vspace{1cm}\\
+	E(W$^2$) = $(-2)^2 * (\dfrac{2}{20} + \dfrac{2}{20} + \dfrac{4}{20}) + 0^2 * (\dfrac{4}{20} + \dfrac{2}{20} + \dfrac{2}{20}) + 2^2 * (\dfrac{2}{20} + \dfrac{2}{20})$
+	\vspace{0.25cm}\\
+	E(W$^2$) = $\dfrac{32}{20} + 0 + \dfrac{16}{20} = \dfrac{48}{16} = 3$
+	\vspace{1cm}\\
+	V(W) = E(W$^2$) - E$^2$(W)
+	\vspace{0.25cm}\\
+	V(W) = 3 - $\left(-\dfrac{8}{16}\right)^2$ = 3 - $\dfrac{64}{256}$ = 3 - 0,25 = 2,75 
+	\end{center}
+\end{document}
