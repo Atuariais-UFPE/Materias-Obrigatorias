@@ -1,0 +1,415 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\title{Prova 3}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tikz}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\textbf{Curso de Ciências Atuariais}\\
+		\textbf{Disciplina Probabilidade 1- Professora Cristina}\\
+		\textbf{26/09/2022 - Terceiro exercício de probabilidade}
+	\end{center}
+	1) Uma moeda honesta é lançada 3 vezes. Seja X o número de caras nos 2 primeiros lançamentos e seja Y o número de caras nos 2 últimos lançamentos.\\
+	a) (0,5 pontos) Liste todos os elementos do espaço amostral deste experimento, especificando os valores de X e Y.\\
+	\vspace{0.5cm}\\
+	\[
+	S_{X_{1}} =
+	\begin{cases}
+	(c, c, \_) = 0\\
+	(c, k, \_); (k, c, \_) = 1\\
+	(k, k, \_) = 2\\
+	\end{cases}
+	\]
+	\vspace{0.5cm}\\
+	\[
+	S_{Y_{1}} =
+	\begin{cases}
+	(\_, c, c) = 0\\
+	(\_, c, k); (\_, k, c) = 1\\
+	(\_, k, k) = 2\\
+	\end{cases}
+	\]
+	\vspace{0.5cm}\\
+	\begin{center}
+		\begin{tabular}{cccc}\midrule
+			& X & Y & $\mathbb{P}$()\\ \midrule
+			(c, c, c) & 0 & 0 & $\left(\dfrac{1}{2}\right)^3 = \dfrac{1}{8}$\\ \midrule
+			(c, c, k) & 0 & 1 & $\left(\dfrac{1}{2}\right)^2 * \dfrac{1}{2} = \dfrac{1}{8}$\\ \midrule
+			(c, k, c) & 1 & 1 & $\dfrac{1}{2} * \dfrac{1}{2} * \dfrac{1}{2}= \dfrac{1}{8}$\\ \midrule
+			(k, c, c) & 1 & 0 & $\dfrac{1}{2} * \left(\dfrac{1}{2}\right)^2 = \dfrac{1}{8}$\\ \midrule
+			(c, k, k) & 1 & 2 & $\dfrac{1}{2} * \left(\dfrac{1}{2}\right)^2 = \dfrac{1}{8}$\\ \midrule
+			(k, c, k) & 1 & 1 & $\dfrac{1}{2} * \dfrac{1}{2} * \dfrac{1}{2}= \dfrac{1}{8}$\\ \midrule
+			(k, k, c) & 2 & 1 & $\left(\dfrac{1}{2}\right)^2 * \dfrac{1}{2} = \dfrac{1}{8}$\\ \midrule
+			(k, k, k) & 2 & 2 & $\left(\dfrac{1}{2}\right)^3 = \dfrac{1}{8}$\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	b) (1 ponto) Construa a função de distribuição de probabilidade conjunta de (X,Y).\\
+	\vspace{0.5cm}\\
+	\begin{center}
+		\begin{tabular}{ccccc}\midrule
+			\multirow{2}{*}{Y} & \multicolumn{3}{c}{X} & \multirow{2}{*}{$\mathbb{P}$(Y = y)}\\ \cmidrule{2-4}
+			& 0 & 1 & 2 & \\ \midrule
+			0 & $\dfrac{1}{8}$ & $\dfrac{1}{8}$ & 0 & $\dfrac{2}{8}$\\ \midrule
+			1 & $\dfrac{1}{8}$ & $\dfrac{2}{8}$ & $\dfrac{1}{8}$ & $\dfrac{4}{8}$\\ \midrule
+			2 & 0 & $\dfrac{1}{8}$ & $\dfrac{1}{8}$ & $\dfrac{2}{8}$\\ \midrule
+			$\mathbb{P}$(X = x) & $\dfrac{2}{8}$ & $\dfrac{4}{8}$ & $\dfrac{2}{8}$ & 1\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	c) (1 ponto) Calcule E(X)\\
+	\vspace{0.25cm}\\
+	\begin{center}
+		E(X) = $0 * \dfrac{2}{8} + 1 * \dfrac{4}{8} + 2 * \dfrac{2}{8} = 0 + \dfrac{4}{8} + \dfrac{4}{8} = \dfrac{8}{8} =1 $
+	\end{center} 
+	\vspace{1cm}
+	2) A tabela a seguir fornece a função de probabilidade conjunta da v.a. (X, Y).
+	\vspace{0.25cm}\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}\hline
+			\multirow{2}{*}{X} & \multicolumn{3}{c|}{Y}\\ \cline{2-4}
+			& 1 & 2 & 3\\ \hline
+			0 & 0,10 & 0,20 & 0,20\\ \hline
+			1 & 0,04 & 0,08 & 0,08\\ \hline
+			2 & 0,06 & 0,12 & 0,12\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{0.25cm}
+	a) (0,5 pontos) Verifique se X e Y são independentes\\
+	\begin{center}
+		E(X) = $1 * 0,2 + 2 * 0,40 + 3 * 0,4$ = 2,2
+		\vspace{0.5cm}\\
+		E(Y) = $0 * 0,5 + 1 * 0,20 + 2 * 0,3$ = 0,8
+		\vspace{0.5cm}\\
+		E(XY) = $0 * 0,5 + 1 * 0,04 + 2 * 0,14 + 3 * 0,08 + 4 * 0,12 + 6 * 0,12$ = 1,76
+		\vspace{0.5cm}\\
+		E(XY) = E(X) * E(Y)\\
+		1,76 = 2,2 * 0,8\\
+		\vspace{0.5cm}
+		X e Y são independentes
+	\end{center}
+	\vspace{1cm}
+	b) (1 ponto) Encontre a distribuição de X dado Y = 2\\
+	\begin{center}
+		\begin{tabular}{cc}
+			X & $\mathbb{P}$(X = x| Y = 2)\\ \midrule
+			0 & $\dfrac{0,20}{0,40} = 0,5$\\ \midrule
+			1 & $\dfrac{0,08}{0,40} = 0,2$\\ \midrule
+			2 & $\dfrac{0,12}{0,40} = 0,3$\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	c) (1 ponto) Encontre E(X|Y = 2)\\
+	\begin{center}
+		E(X|Y = 2) = 0 * 0,5 + 1 * 0,2  + 2 * 0,3 = 0,8
+	\end{center}
+	\vspace{1cm}
+	3) Numa caixa encontram-se 5 moedas de ouro e 2 de prata. Serão retiradas 2 moedas com reposição. Considere as variáveis aleatórias:\\
+	X = Quantidade de moedas de ouro\\
+	Y = Quantidade de moedas de prata\\
+	a) (1 ponto) Construa a função de distribuição de probabilidade conjunta de (X, Y).\\
+	\begin{center}
+		\begin{tikzpicture}
+			\tikzstyle{level 1} = [sibling distance=6cm, level distance=2cm]
+			\tikzstyle{level 2} = [sibling distance=2cm, level distance=3cm]
+			\node{}
+				child{
+				node{Ou}
+					child{
+					node{Ou}
+					edge from parent
+					node[fill=white]{\(\dfrac{4}{6}\)}
+					}
+					child{
+					node{Pr}
+					edge from parent
+					node[fill=white]{\(\dfrac{2}{6}\)}
+					}
+				edge from parent
+				node[fill=white]{\(\dfrac{5}{7}\)}
+				}
+				child{
+				node{Pr}
+					child{
+					node{Ou}
+					edge from parent
+					node[fill=white]{\(\dfrac{5}{6}\)}
+					}		
+					child{
+					node{Pr}
+					edge from parent
+					node[fill=white]{\(\dfrac{1}{6}\)}
+					}
+				edge from parent
+				node[fill=white]{\(\dfrac{2}{7}\)}		
+				};
+		\end{tikzpicture}
+	\end{center}
+	\vspace{1cm}
+		\[
+	S_{X} =
+	\begin{cases}
+	(Pr, Pr) = 0\\
+	(Pr, Ou); (Ou, Pr) = 1\\
+	(Ou, Ou) = 2\\
+	\end{cases}
+	\]
+	\vspace{0.5cm}\\
+	\begin{center}
+		$\mathbb{P}$(X = 0) = $\dfrac{2}{7} * \dfrac{1}{6} = \dfrac{2}{42}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 1) = $\dfrac{5}{7} * \dfrac{2}{6} + \dfrac{2}{7} * \dfrac{5}{6} = \dfrac{20}{42}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(X = 2) = $\dfrac{5}{7} * \dfrac{4}{6} = \dfrac{20}{42}$
+	\end{center}
+	\vspace{0.5cm}
+	\[
+	S_{Y} =
+	\begin{cases}
+	(Ou, Ou) = 0\\
+	(Ou, Pr); (Pr, Ou) = 1\\
+	(Pr, Pr) = 2\\
+	\end{cases}
+	\]
+	\vspace{0.5cm}\\
+	\begin{center}
+		$\mathbb{P}$(Y = 0) = $\dfrac{5}{7} * \dfrac{4}{6} = \dfrac{20}{42}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(Y = 1) = $\dfrac{5}{7} * \dfrac{2}{6} + \dfrac{2}{7} * \dfrac{5}{6} = \dfrac{20}{42}$
+		\vspace{0.5cm}\\
+		$\mathbb{P}$(Y = 2) = $\dfrac{2}{7} * \dfrac{1}{6} = \dfrac{2}{42}$
+	\end{center}
+	\vspace{1cm}
+	\begin{center}
+		\begin{tabular}{ccccc}
+			\multirow{2}{*}{Y} & \multicolumn{3}{c}{X} & $\mathbb{P}$(Y = y)\\ \cmidrule{2-4}
+			& 0 & 1 & 2 & \\ \midrule
+			0 & 0 & 0 & $\dfrac{20}{42}$ & $\dfrac{20}{42}$ \\ \midrule
+			1 & 0 & $\dfrac{20}{42}$ & 0 & $\dfrac{20}{42}$\\ \midrule
+			2 & $\dfrac{2}{42}$ & 0 & 0 & $\dfrac{2}{42}$\\ \midrule
+			$\mathbb{P}$(X = x) & $\dfrac{2}{42}$ & $\dfrac{20}{42}$ & $\dfrac{20}{42}$ & 1\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	b) (0,5 pontos) Verifique se X e Y são independentes.\\
+	\begin{center}
+			$\mathbb{P}$(X = x) * $\mathbb{P}$(Y = y) = $\mathbb{P}$(X = x $\cap$ Y = y)
+			\vspace{0.5cm}\\
+			$\mathbb{P}$(X = 0) * $\mathbb{P}$(Y = 0) = $\mathbb{P}$(X = 0 $\cap$ Y = 0)\\
+			\vspace{0.25cm}
+			$\dfrac{20}{42} * \dfrac{2}{42} \neq 0$\\
+			\vspace{1cm}
+			X e Y não são independentes
+	\end{center}
+	\vspace{1cm}
+	c) (1 ponto) Encontre a distribuição de probabilidade de Y dado X = 0.\\
+	\begin{center}
+		\begin{tabular}{cc}
+			Y & $\mathbb{P}$(Y = y | X = 0)\\ \midrule
+			0 & $\dfrac{0}{\dfrac{2}{42}} = 0$\\ \midrule
+			1 & $\dfrac{0}{\dfrac{22}{20}} = 0$\\ \midrule
+			2 & $\dfrac{\dfrac{2}{42}}{\dfrac{2}{42}} = 1$\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	4) Considere a seguinte distribuição de probabioidade conjunta (X, Y)
+	\vspace{0.25cm}\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|}\hline
+			\multirow{2}{*}{X} & \multicolumn{2}{c|}{Y}\\ \cline{2-3}
+			& 0 & -1\\ \hline
+			0 & 0,1 & 0,05\\ \hline
+			-1 & 0,3 & 0,15\\ \hline
+			2 & 0,2 & 0,2\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{0.25cm}
+	a) (0,5 pontos) Encontre E(X|Y = -1).\\
+	\vspace{0.5cm}
+	\begin{center}
+		\begin{tabular}{cc}
+			X & $\mathbb{P}$(X = x | Y = -1)\\ \midrule
+			0 & $\dfrac{0,05}{0,22} = 0,2273$\\ \midrule
+			-1 & $\dfrac{0,15}{0,22} = 0,6818$\\ \midrule
+			2 & $\dfrac{0,02}{0,22} = 0,0900$\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	b) (1 ponto) Encontre a distribuição de probabilidade de W = X - 2Y.\\
+	\vspace{0.5cm}
+	\begin{center}
+		\begin{tabular}{ccc}
+			X & Y & W\\ \midrule
+			0 & 0 & 0\\ \midrule
+			0 & -1 & 2\\ \midrule
+			-1 & 0 & -1\\ \midrule
+			-1 & -1 & 1\\ \midrule
+			2 & 0 & 2\\ \midrule
+			2 & -1 & 4\\ \midrule
+		\end{tabular}
+		\hspace{1cm}
+		\begin{tabular}{cc}
+			W & $\mathbb{P}$(W = w)\\ \midrule
+			-1 & 0,3\\ \midrule
+			0 & 0,1\\ \midrule
+			1 & 0,15\\ \midrule
+			2 & 0,25\\ \midrule
+			4 & 0,2\\ \midrule
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	c) (1 ponto) Encontre E(W).
+	\vspace{0.5cm}
+	\begin{center}
+		E(W) = -1 * 0,3 + 0 * 0,1 + 1 * 0,15 + 2 * 0,25 + 4 * 0,2\\
+		E(W)= -0,3 + 0 +0,1 + 0,5 + 0,8 = 1,1
+	\end{center}
+	\vspace{1cm}
+	\textbf{Desafio para bônus (1 ponto):}
+	\vspace{0.25cm}\\
+	Foi feito o loteamento de uma área rural em terrenos retangulares. Para cada terreno, seu comprimento e sua largura, ambos em metros, podem ser iguais a 10m, 20m ou 30m. Para simplificar, vamos trabalhar em decâmetros (simbolicamente dam), lembrando que 1dam = 10m. Assim, tanto o comprimento X como a largura Y de um terreno sorteado ao acaso, podem ser iguais a 1, 2 ou 3. A tabela a seguir fornece (apenas parcialmente) a distribuição conjunta de X e de Y, variáveis aleatórias supostas independentes:\\
+	\vspace{0.25cm}\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			\multirow{2}{*}{X} & \multicolumn{3}{c|}{Y} & \multirow{2}{*}{$\mathbb{P}$(X)}\\ \cline{2-4}
+			& 1 & 2 & 3 & \\ \hline
+			1 & 0,35 & & 0,14 & \\ \hline
+			2 & & & & 0,20\\ \hline
+			3 & 0,05 & & & \\ \hline
+			$\mathbb{P}$(Y) & & 0,30 & & \\ \hline	
+		\end{tabular}
+	\end{center}
+	\vspace{0.25cm}
+	Considere as v.a.'s V = 2X + 2Y, o perímetro do terreno e W = XY, a área do terreno. Calcule:\\
+	a) O valor de cada probabilidade, conjunta ou marginal, omitido na tabela acima.\\
+	\vspace{0.5cm}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			\multirow{2}{*}{X} & \multicolumn{3}{c|}{Y} & \multirow{2}{*}{$\mathbb{P}$(X)}\\ \cline{2-4}
+			& 1 & 2 & 3 & \\ \hline
+			1 & 0,35 & a & 0,14 & b\\ \hline
+			2 & c & d & e & 0,20\\ \hline
+			3 & 0,05 & f & g & h \\ \hline
+			$\mathbb{P}$(Y) & i & 0,30 & j & k\\ \hline	
+		\end{tabular}
+		\vspace{1cm}\\
+		0,35 + c + 0,05 = i
+		\vspace{0.25cm}\\
+		0,35 + (0,20 * i) + 0,05 = i
+		\vspace{0.25cm}\\
+		0,40 = 0,8i
+		\vspace{0.25cm}\\
+		i = 0,5
+		\vspace{1cm}\\
+		0,20 * i = c 
+		\vspace{0.25cm}\\
+		0,20 * 0,5 = c
+		\vspace{0.25cm}\\
+		c = 0,1
+		\vspace{1cm}\\
+		k = 1
+		\vspace{1cm}\\
+		i + 0,30 + j = k
+		\vspace{0.25cm}\\
+		0,5 + 0,30 + j = 1
+		\vspace{0.25cm}\\
+		j = 0,2
+		\vspace{1cm}\\
+		b * j = 0,14
+		\vspace{0.25cm}\\
+		0,2 * b = 0,14
+		\vspace{0.25cm}\\
+		b = 0,7
+		\vspace{1cm}\\
+		b + 0,2 + h = k
+		\vspace{0.25cm}\\
+		0,7 + 0,2 + h = 1
+		\vspace{0.25cm}\\
+		h = 0,1
+		\vspace{1cm}\\
+		0,35 + a + 0,14 = b
+		\vspace{0.25cm}\\
+		0,35 + a + 0,14 = 0,7
+		\vspace{0.25cm}\\
+		a = 0,21
+		\vspace{1cm}\\
+		d = 0,30 * 0,20
+		\vspace{0.25cm}\\ 
+		d = 0,06
+		\vspace{1cm}\\
+		f = 0,30 * h
+		\vspace{0.25cm}\\
+		f = 0,30 * 0,1
+		\vspace{0.25cm}\\
+		f = 0,03
+		\vspace{1cm}\\
+		e = 0,20 * j
+		\vspace{0.25cm}\\
+		e = 0,20 * 0,2
+		\vspace{0.25cm}\\
+		e = 0,04
+		\vspace{1cm}\\
+		g = h * j
+		\vspace{0.25cm}\\
+		g = 0,1 * 0,2
+		\vspace{0.25cm}\\
+		g = 0,02
+		\vspace{1cm}\\
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			\multirow{2}{*}{X} & \multicolumn{3}{c|}{Y} & \multirow{2}{*}{$\mathbb{P}$(X)}\\ \cline{2-4}
+			& 1 & 2 & 3 & \\ \hline
+			1 & 0,35 & 0,21 & 0,14 & 0,70\\ \hline
+			2 & 0,10 & 0,06 & 0,04 & 0,20\\ \hline
+			3 & 0,05 & 0,03 & 0,02 & 0,10 \\ \hline
+			$\mathbb{P}$(Y) & 0,5 & 0,30 & 0,2 & 1\\ \hline	
+		\end{tabular}
+	\end{center}
+	\vspace{1.5cm}
+	b) A probabilidade condicional de que a área seja igual a 4dam$^2$, dado que o perímetro é igual a 8dam.\\
+	\begin{center}
+		\begin{tabular}{ccccc}
+			X & Y & V & W & $\mathbb{P}$(X = x $\cap$ Y = y)\\ \midrule
+			1 & 1 & 4 & 1 & 0,35 \\ \midrule
+			1 & 2 & 6 & 2 & 0,10 \\ \midrule
+			1 & 3 & 8 & 3 & 0,05 \\ \midrule
+			2 & 1 & 6 & 2 & 0,21 \\ \midrule
+			2 & 2 & 8 & 4 & 0,06\\ \midrule
+			2 & 3 & 10 & 6 & 0,03\\ \midrule
+			3 & 1 & 8 & 3 & 0,14\\ \midrule
+			3 & 2 & 10 & 6 & 0,04\\ \midrule
+			3 & 3 & 12 & 9 & 0,02\\ \midrule		
+		\end{tabular}
+		\vspace{1cm}\\
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+			\multirow{2}{*}{V} & \multicolumn{6}{c|}{W} & \multirow{2}{*}{$\mathbb{P}$(V)}\\ \cline{2-7}
+			& 1 & 2 & 3 & 4 & 6 & 9 & \\ \hline
+			4 & 0,35 & 0 & 0 & 0 & 0 & 0 & 0,35\\ \hline
+			6 & 0 & 0,31 & 0 & 0 & 0 & 0 & 0,31\\ \hline
+			8 & 0 & 0 & 0,19 & 0,06 & 0 & 0 & 0,19\\ \hline
+			10 & 0 & 0 & 0 & 0 & 0,07 & 0 & 0,07\\ \hline
+			12 & 0 & 0 & 0 & 0 & 0 & 0,02 & 0,02\\ \hline
+			$\mathbb{P}$(W) & 0,35 & 0,31 & 0,19 & 0,06 & 0,07 & 0,02 & 1\\ \hline
+		\end{tabular}
+		\vspace{1cm}\\
+		$\mathbb{P}$(W = 4 | V = 8) = $\dfrac{\mathbb{P}(W = 4) * \mathbb{P}(V = 8)}{\mathbb{P}(V = 8)} = \mathbb{P}(W = 4) = 0,06$  
+	\end{center}
+	\vspace{2cm}
+	Formulário:\\
+	\vspace{0.25cm}\\
+	E(X) = $\sum_{i=1}^{n}$ x$_{i}$ * $\mathbb{P}$(X = x$_{i}$) 
+	\vspace{0.25cm}\\
+	$\mathbb{P}$(X = x$_{i}$ | Y = y$_{j}$) = $\dfrac{\mathbb{P}(X = x_{i}, Y = y_{j})}{\mathbb{P}(Y = y_{j})}$
+	\vspace{0.25cm}\\
+	Se X e Y são independentes, então: $\mathbb{P}(X = x_{i}, Y = y_{j}) = \mathbb{P}(X = x_{i}) * \mathbb{P}(X = x_{j})$
+	\vspace{0.25cm}\\
+	E(X | Y = y$_{j}$) = $\sum_{i=1}^{n}$ x$_{i}$ * $\mathbb{P}$(X = x$_{i}$ | Y = y$_{j}$)
+\end{document}
