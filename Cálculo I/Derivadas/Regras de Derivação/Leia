@@ -1,0 +1,15 @@
+# Em cálculo a diversas formas de obter um mesmo resultado, e estamos sempre em busca de uma forma eficaz e eficiente, ou seja, uma forma fácil de lidar
+# com funções complicadas.
+# Para a facilitação dos cálculos das derivadas, são utilizadas de regras e propriedades, essas que partem da definição, e acaba sendo utilizada em situações mais gerais.
+# Primeiramente, irei demonstrar a derivada da função pela definição, e depois utilizarei da regra, para que vejam que não apresenta diferenças no resultado.
+
+#As REGRAS seguem a seguinte ordem:
+
+# 1-> Regra da Queda (Derivada de uma Potência)
+# 2-> Derivada da Soma e Subtração de funções);
+# 3-> Regra do Produto (Derivada entre produto de funções);
+# 4-> Regra do Quociente (Derivada da divisão entre funções);
+# 5-> Regra da Cadeia (Derivada de uma função que se encontra dentro de outra função);
+# 6-> Derivada de exponencial; 
+# 7-> Derivada do logaritmo; 
+# 8-> Derivada de funções trigonométricas;
